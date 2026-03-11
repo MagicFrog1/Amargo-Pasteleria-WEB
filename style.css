@@ -400,10 +400,8 @@ body {
 .scroll-indicator {
     position: absolute;
     bottom: 30px; 
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -564,11 +562,11 @@ body {
     border: 1px solid rgba(0,0,0,0.05);
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    /* True Aura glow around the cake/food card representing the magic */
-    box-shadow: 0 0 50px rgba(212, 163, 115, 0.4), 0 0 20px rgba(212, 163, 115, 0.2); 
-    border-color: rgba(212, 163, 115, 0.3);
+.product-card:hover, .product-card:active {
+    transform: translateY(-8px);
+    /* Very strong Aura glow around the dessert */
+    box-shadow: 0 0 35px rgba(255, 153, 0, 0.4), 0 0 60px rgba(255, 153, 0, 0.2); 
+    border-color: rgba(255, 153, 0, 0.5);
 }
 
 .product-image {
