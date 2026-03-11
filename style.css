@@ -143,6 +143,34 @@ body {
     opacity: 1;
 }
 
+/* Three-bar Hamburger Icon styles */
+.mobile-menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; 
+    padding: 10px;
+}
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--secondary);
+    margin: 6px auto;
+    transition: 0.4s var(--transition);
+    border-radius: 2px;
+}
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -263,17 +291,8 @@ body {
     font-size: 1.5rem;
 }
 
-/* Card Modern Hover */
-.product-card {
-    border: none;
-    background: #fff;
-    transition: clip-path 0.4s var(--transition), transform 0.4s var(--transition);
-}
-
-.product-card:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    transform: translateY(-10px) rotate(1deg);
-}
+/* We removed the old folding clip-path entirely from here 
+   as we are standardizing on the aura glow */
 
 /* Floating Animation */
 @keyframes float {
@@ -546,8 +565,10 @@ body {
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    /* True Aura glow around the cake/food card representing the magic */
+    box-shadow: 0 0 50px rgba(212, 163, 115, 0.4), 0 0 20px rgba(212, 163, 115, 0.2); 
+    border-color: rgba(212, 163, 115, 0.3);
 }
 
 .product-image {
@@ -830,8 +851,35 @@ body {
 
 /* --- MOBILE RESPONSIVENESS & POLISH --- */
 @media (max-width: 900px) {
+    .mobile-menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: var(--bg-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transition: right 0.6s var(--transition);
+        z-index: 1000;
+        margin: 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
     .nav-links a {
-        display: none; /* Will implement hamburger if needed, for now just cleaning the header */
+        font-size: 1.6rem;
+        margin: 0;
+        opacity: 1;
     }
     
     .identity-grid, .visit-card {
