@@ -1,5 +1,5 @@
 :root {
-    --primary: #FDE8DD; /* Solid light pastel peach */
+    --primary: #FBE5D6; /* True elegant pastel peach/orange */
     --secondary: #312A25; /* Elegant warm dark */
     --secondary-light: #F4EBE6; /* Color for cards */
     --accent: #D4A373;
@@ -172,9 +172,7 @@ body {
 }
 
 .hero-overlay {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    display: none;
 }
 
 .logo-hero h1 {
@@ -277,7 +275,7 @@ body {
     transform: translateY(-10px) rotate(1deg);
 }
 
-/* New Floating Animation */
+/* Floating Animation */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
@@ -288,18 +286,15 @@ body {
     animation: float 4s ease-in-out infinite;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
+    animation: fadeUpIn 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes fadeUpIn {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-content h2 {
@@ -311,10 +306,10 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 8rem;
+    font-size: clamp(4rem, 12vw, 8rem); /* Slightly larger */
     line-height: 0.9;
     margin-bottom: 2rem;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* Removed text-shadow to make it clean */
 }
 
 .hero-content p {
@@ -383,15 +378,16 @@ body {
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 
-/* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 20px; /* Lower position */
+    bottom: 30px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     z-index: 10;
+    left: 50%;
+    transform: translateX(-50%); /* Centered correctly */
 }
 
 .mouse {
@@ -670,12 +666,12 @@ body {
 .visit-card {
     background: var(--secondary);
     color: white;
-    border-radius: 40px; /* Softer radius */
+    border-radius: 40px; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
-    min-height: 500px;
-    box-shadow: 0 30px 60px rgba(49, 42, 37, 0.15); /* Floating effect */
+    min-height: 380px; /* Made much smaller */
+    box-shadow: 0 30px 60px rgba(49, 42, 37, 0.15); 
     transition: transform 0.6s var(--transition);
 }
 
@@ -684,7 +680,7 @@ body {
 }
 
 .visit-info {
-    padding: 4rem;
+    padding: 3rem 2.5rem; /* Reduced padding */
 }
 
 .visit-info h2 {
