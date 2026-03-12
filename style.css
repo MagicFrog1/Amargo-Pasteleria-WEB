@@ -1,12 +1,12 @@
 :root {
-    --primary: #FBE5D6; /* True elegant pastel peach/orange */
-    --secondary: #312A25; /* Elegant warm dark */
-    --secondary-light: #F4EBE6; /* Color for cards */
-    --accent: #D4A373;
-    --bg-light: #FFFBF9;
-    --text-main: #3D332D;
-    --text-muted: #857469;
-    --glass: rgba(255, 255, 255, 0.7);
+    --primary: #F6E6E0; /* Pink as requested */
+    --secondary: #000000; /* Black as requested */
+    --secondary-light: #FBF4F1; /* Slightly lighter pink for subtle contrast */
+    --accent: #000000;
+    --bg-light: #F6E6E0;
+    --text-main: #000000;
+    --text-muted: #333333;
+    --glass: rgba(246, 230, 224, 0.8);
     --transition: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -21,7 +21,7 @@ body {
     background-color: var(--bg-light);
     color: var(--text-main);
     overflow-x: hidden;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Montserrat', 'Outfit', sans-serif;
 }
 
 .container {
@@ -89,8 +89,8 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--secondary);
-    letter-spacing: -1px;
-    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+    font-family: 'Bodoni Moda', serif;
 }
 
 /* Marquee Effect - Seamless & Static */
@@ -204,22 +204,23 @@ body {
 }
 
 .logo-hero h1 {
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(3rem, 10vw, 7rem);
     line-height: 0.9;
     margin-bottom: 0.5rem;
     font-weight: 700;
     letter-spacing: -2px;
     color: var(--secondary);
+    font-family: 'Bodoni Moda', serif;
 }
 
 .logo-hero .tagline {
     display: block;
     font-size: clamp(0.7rem, 2vw, 1rem);
     text-transform: uppercase;
-    letter-spacing: 6px;
-    font-weight: 600;
+    letter-spacing: 8px; /* Increased for that premium look */
+    font-weight: 400;
     color: var(--secondary);
-    opacity: 0.7;
+    opacity: 0.8;
     margin-bottom: 0.5rem;
 }
 
@@ -250,12 +251,12 @@ body {
 
 /* Navbar logo refinement */
 .logo {
-    font-size: 2rem;
+    font-size: 2.22rem; /* Adjusted based on requested 20% scale increment from previous convo */
     font-weight: 700;
     color: var(--secondary);
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     margin-right: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
 }
 
 /* Mouse Glow Effect Removed */
@@ -321,7 +322,8 @@ body {
     font-style: italic;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--secondary); /* Changed from primary to secondary for black text visibility */
+    font-family: 'Bodoni Moda', serif;
 }
 
 .hero-content h1 {
@@ -422,19 +424,20 @@ body {
 }
 
 .subtitle {
-    color: var(--accent);
+    color: var(--secondary);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     font-size: 0.8rem;
     display: block;
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .identity-text h2 {
-    font-size: 2.6rem;
+    font-size: 3.12rem; /* Adjusted for scale */
     margin-bottom: 1.2rem;
     line-height: 1.1;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .identity-text p {
@@ -492,7 +495,8 @@ body {
 }
 
 .section-header h2 {
-    font-size: 2.8rem;
+    font-size: 3.36rem; /* Adjusted for scale */
+    font-family: 'Bodoni Moda', serif;
 }
 
 /* Subtly float the section icons */
@@ -608,6 +612,7 @@ body {
 .product-info h3 {
     font-size: 1.4rem;
     margin-bottom: 0.6rem;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .product-info p {
@@ -668,7 +673,7 @@ body {
 .visit-info h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .address {
@@ -703,7 +708,7 @@ body {
 }
 
 .schedule-header h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--secondary);
@@ -750,14 +755,14 @@ body {
 }
 
 .schedule-body .day {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1.2px;
 }
 
 .schedule-body .hours {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1rem;
     font-weight: 400;
 }
@@ -814,7 +819,9 @@ body {
 }
 
 .footer-brand h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 0.5rem;
 }
 
 /* Animation trigger class */
@@ -943,6 +950,12 @@ body {
 
     .schedule-header h3 {
         font-size: 2rem;
+    }
+    .schedule-header {
+        padding: 0.8rem 1.2rem;
+    }
+    .schedule-body {
+        padding: 1rem;
     }
 }
 
