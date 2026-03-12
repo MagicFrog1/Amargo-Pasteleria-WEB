@@ -87,10 +87,10 @@ body {
 
 .logo {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 400; /* DM Serif Display is naturally bold */
     color: var(--secondary);
-    letter-spacing: -0.5px;
-    font-family: 'Bodoni Moda', serif;
+    letter-spacing: -0.02em;
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Marquee Effect - Seamless & Static */
@@ -204,24 +204,25 @@ body {
 }
 
 .logo-hero h1 {
-    font-size: clamp(3rem, 10vw, 7rem);
-    line-height: 0.9;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: -2px;
+    font-size: clamp(4rem, 15vw, 8rem);
+    line-height: 0.85;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
     color: var(--secondary);
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .logo-hero .tagline {
     display: block;
-    font-size: clamp(0.7rem, 2vw, 1rem);
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
     text-transform: uppercase;
-    letter-spacing: 8px; /* Increased for that premium look */
+    letter-spacing: 0.4em; /* Very wide as in the logo image */
     font-weight: 400;
     color: var(--secondary);
-    opacity: 0.8;
-    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-family: 'Bodoni Moda', serif; /* Using a clean serif for the tagline */
 }
 
 .hero-desc {
@@ -251,12 +252,12 @@ body {
 
 /* Navbar logo refinement */
 .logo {
-    font-size: 2.22rem; /* Adjusted based on requested 20% scale increment from previous convo */
-    font-weight: 700;
+    font-size: 2.22rem; 
+    font-weight: 400;
     color: var(--secondary);
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     margin-right: 3rem;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Mouse Glow Effect Removed */
@@ -322,7 +323,7 @@ body {
     font-style: italic;
     font-weight: 400;
     margin-bottom: 1rem;
-    color: var(--secondary); /* Changed from primary to secondary for black text visibility */
+    color: var(--secondary); 
     font-family: 'Bodoni Moda', serif;
 }
 
@@ -434,10 +435,10 @@ body {
 }
 
 .identity-text h2 {
-    font-size: 3.12rem; /* Adjusted for scale */
+    font-size: 3.12rem; 
     margin-bottom: 1.2rem;
     line-height: 1.1;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .identity-text p {
@@ -495,8 +496,8 @@ body {
 }
 
 .section-header h2 {
-    font-size: 3.36rem; /* Adjusted for scale */
-    font-family: 'Bodoni Moda', serif;
+    font-size: 3.36rem; 
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Subtly float the section icons */
@@ -612,7 +613,7 @@ body {
 .product-info h3 {
     font-size: 1.4rem;
     margin-bottom: 0.6rem;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .product-info p {
@@ -673,7 +674,7 @@ body {
 .visit-info h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .address {
@@ -708,9 +709,9 @@ body {
 }
 
 .schedule-header h3 {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--secondary);
     letter-spacing: 1.5px;
     margin: 0;
@@ -820,7 +821,7 @@ body {
 
 .footer-brand h3 {
     font-size: 2rem;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'DM Serif Display', serif;
     margin-bottom: 0.5rem;
 }
 
