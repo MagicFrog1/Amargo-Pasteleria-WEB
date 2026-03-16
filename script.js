@@ -95,7 +95,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Product Details Data
 const productDetails = {
     'Lotus Cheesecake': {
-        description: 'Nuestra Lotus Cheesecake es una explosión de texturas. Base crujiente de galleta Lotus Biscoff, crema de queso sedosa infusionada con crema de Lotus y un topping generoso de galleta triturada. Preparada diariamente con ingredientes premium.',
+        description: 'Nuestras mini Lotus Cheesecakes se presentan en moldes individuales de madera, manteniendo toda la cremosidad y el sabor intenso de la galleta Biscoff original. La opción perfecta para un capricho individual.',
         allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
     'Tiramisú Amargo': {
@@ -106,9 +106,9 @@ const productDetails = {
         description: 'La máxima expresión del sabor Biscoff. Un postre individual diseñado para los amantes del caramelo, con un corazón líquido de crema de galleta y una cobertura suave tipo mousse.',
         allergens: ['grains', 'milk', 'nuts']
     },
-    'Edición Amargo': {
-        description: 'Nuestra creación insignia. Cambia según la inspiración del chef, pero siempre mantiene el equilibrio perfecto entre lo dulce y lo amargo, utilizando chocolate de origen único y frutas de temporada de Tenerife.',
-        allergens: ['milk', 'nuts', 'fruit']
+    'Colección Happy Hippo': {
+        description: 'Para los auténticos fans de Kinder: una experiencia completa que incluye nuestro cheesecake cremoso, un brownie intenso y una cookie artesanal, todo coronado con el icónico Happy Hippo y un milkshake irresistible.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
     'Mundo de Ensueño': {
         description: 'Tartas diseñadas para transportarte a un cuento de hadas. Personalizamos cada detalle, desde personajes favoritos hasta decoraciones hechas a mano en azúcar. El límite es tu imaginación.',
@@ -127,12 +127,12 @@ const productDetails = {
         allergens: ['grains', 'milk', 'flowers']
     },
     'Variedad de Autor': {
-        description: 'Nuestras cookies son famosas por su tamaño y su generoso relleno. Masa artesanal con mantequilla de alta calidad y una mezcla secreta de harinas que las hace irresistibles.',
+        description: 'Explora nuestro arcoíris de sabores: desde la vibrante Blue Oreo y la clásica Red Velvet hasta combinaciones de tres chocolates. La torre perfecta para los indecisos que lo quieren probar todo.',
         allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
-    'Oreo Supreme': {
-        description: 'La cookie definitiva para los fans de Oreo. Con trozos reales de galleta en la masa y un relleno de crema que se funde en tu boca. Horneada varias veces al día para asegurar frescura máxima.',
-        allergens: ['grains', 'milk', 'eggs']
+    'Nutella Heart': {
+        description: 'Nuestra masa secreta de cookie dorada y crujiente que esconde un generoso interior de auténtica Nutella fluida. Horneadas diariamente para garantizar ese corazón derretido.',
+        allergens: ['grains', 'milk', 'nuts']
     }
 };
 
