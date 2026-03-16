@@ -92,59 +92,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Carousel Logic
-const slides = document.querySelectorAll('.slide');
-const indicators = document.querySelectorAll('.indicator');
-const prevBtn = document.querySelector('.carousel-arrow.prev');
-const nextBtn = document.querySelector('.carousel-arrow.next');
-let currentSlide = 0;
-let carouselInterval;
-
-const showSlide = (n) => {
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(ind => ind.classList.remove('active'));
-    
-    currentSlide = (n + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    indicators[currentSlide].classList.add('active');
-};
-
-const nextSlide = () => showSlide(currentSlide + 1);
-const prevSlide = () => showSlide(currentSlide - 1);
-
-const startCarousel = () => {
-    carouselInterval = setInterval(nextSlide, 5000);
-};
-
-const resetCarousel = () => {
-    clearInterval(carouselInterval);
-    startCarousel();
-};
-
-if (nextBtn && prevBtn) {
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetCarousel();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetCarousel();
-    });
-}
-
-indicators.forEach((ind, index) => {
-    ind.addEventListener('click', () => {
-        showSlide(index);
-        resetCarousel();
-    });
-});
-
-// Start carousel
-if (slides.length > 0) {
-    startCarousel();
-}
-
 // Product Details Data
 const productDetails = {
     'Lotus Cheesecake': {
@@ -247,6 +194,67 @@ if (closeModal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     });
+}
+
+// Carousel Functionality
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.carousel-nav.prev');
+const nextBtn = document.querySelector('.carousel-nav.next');
+let currentSlide = 0;
+let slideInterval;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function startAutoPlay() {
+    slideInterval = setInterval(nextSlide, 4000); // 4 seconds
+}
+
+function stopAutoPlay() {
+    clearInterval(slideInterval);
+}
+
+if (slides.length > 0) {
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopAutoPlay();
+        startAutoPlay();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        stopAutoPlay();
+        startAutoPlay();
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            stopAutoPlay();
+            startAutoPlay();
+        });
+    });
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+    carouselContainer.addEventListener('mouseleave', startAutoPlay);
+
+    startAutoPlay();
 }
 
 // Close on outside click
