@@ -899,22 +899,22 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: rgba(246, 230, 224, 0.95); /* Match app palette */
+    backdrop-filter: blur(15px);
     overflow-y: auto;
 }
 
 .modal-content {
-    background-color: var(--secondary);
-    color: white;
+    background-color: white; /* Clean contrast */
+    color: var(--secondary);
     margin: 5% auto;
     padding: 3rem;
     border-radius: 40px;
-    width: 85%;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1200px;
     position: relative;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .animate-modal {
@@ -922,7 +922,7 @@ body {
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(50px) scale(0.95); }
+    from { opacity: 0; transform: translateY(30px) scale(0.98); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -930,16 +930,18 @@ body {
     position: absolute;
     right: 30px;
     top: 20px;
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 40px;
     font-weight: 300;
     cursor: pointer;
     transition: all 0.3s;
+    opacity: 0.5;
 }
 
 .close-modal:hover {
-    color: white;
+    color: var(--secondary);
     transform: rotate(90deg);
+    opacity: 1;
 }
 
 .modal-grid {
@@ -953,35 +955,55 @@ body {
     font-family: 'DM Serif Display', serif;
     font-size: 3.5rem;
     margin-bottom: 2rem;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .modal-desc {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 3rem;
-    color: #ccc;
+    color: var(--text-muted);
 }
 
 .allergens h4 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
-    color: var(--primary);
+    color: var(--secondary);
+    font-weight: 700;
 }
 
 .allergen-icons {
     display: flex;
-    gap: 1rem;
-    font-size: 1.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.allergen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.allergen-icon {
+    font-size: 2rem;
+}
+
+.allergen-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
 }
 
 .modal-image {
     border-radius: 30px;
     overflow: hidden;
-    height: 500px;
-    border: 1px solid rgba(255,255,255,0.1);
+    height: 600px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .modal-image img {
@@ -996,12 +1018,13 @@ body {
         gap: 2rem;
     }
     .modal-image {
-        height: 350px;
+        height: 400px;
         order: -1;
     }
     .modal-content {
         padding: 2rem;
-        margin: 2% auto;
+        margin: 5% auto;
+        width: 95%;
     }
     .modal-info h2 {
         font-size: 2.5rem;
