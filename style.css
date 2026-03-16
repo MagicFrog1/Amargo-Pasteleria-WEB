@@ -121,23 +121,63 @@ body {
     100% { transform: translateX(-50%); }
 }
 
+/* Hero Brand Area */
+.hero-brand {
+    padding: 8rem 0 4rem;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.logo-hero h1 {
+    font-size: clamp(4rem, 15vw, 8rem);
+    line-height: 0.85;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--secondary);
+    font-family: 'DM Serif Display', serif;
+}
+
+.tagline {
+    display: block;
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-weight: 400;
+    color: var(--secondary);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-family: 'Bodoni Moda', serif;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
 /* Hero Carousel */
-.hero-carousel {
-    height: 80vh;
+.hero-carousel-section {
+    height: 60vh;
     position: relative;
     overflow: hidden;
-    background: var(--secondary);
+    background: var(--bg-light);
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .carousel-container {
     height: 100%;
     width: 100%;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
 }
 
 .carousel-wrapper {
     height: 100%;
     width: 100%;
-    display: flex;
 }
 
 .slide {
@@ -151,7 +191,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 .slide.active {
@@ -159,41 +198,9 @@ body {
 }
 
 .slide img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.slide-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-}
-
-.slide-content {
-    position: relative;
-    z-index: 10;
-    color: white;
-    padding: 0 2rem;
-}
-
-.slide-content h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(3rem, 10vw, 6rem);
-    margin-bottom: 1rem;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.slide-content p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 /* Carousel Nav */
@@ -201,51 +208,57 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 1rem;
+    color: var(--secondary);
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     cursor: pointer;
     z-index: 100;
     transition: all 0.3s;
     backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-arrow:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.prev { left: 20px; border-radius: 0 10px 10px 0; }
-.next { right: 20px; border-radius: 10px 0 0 10px; }
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 15px;
+    gap: 10px;
     z-index: 100;
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .indicator.active {
-    background: white;
-    transform: scale(1.3);
+    background: var(--secondary);
+    transform: scale(1.5);
 }
 
 /* Main Action Buttons */
 .main-actions {
-    padding: 4rem 0;
+    padding: 3rem 0 5rem;
     background: var(--bg-light);
 }
 
