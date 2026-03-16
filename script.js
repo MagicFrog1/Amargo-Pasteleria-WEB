@@ -216,3 +216,22 @@ window.addEventListener('click', (e) => {
         document.body.style.overflow = 'auto';
     }
 });
+
+// Hero Background Carousel Logic
+const initHeroCarousel = () => {
+    const slides = document.querySelectorAll('.hero-bg-slide');
+    if (slides.length === 0) return;
+    
+    let currentSlide = 0;
+    
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+};
+
+// Initialize carousels and observers
+document.addEventListener('DOMContentLoaded', () => {
+    initHeroCarousel();
+});
