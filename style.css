@@ -121,6 +121,97 @@ body {
     100% { transform: translateX(-50%); }
 }
 
+/* Quick Nav Section */
+.quick-nav {
+    padding: 3rem 0;
+    background: var(--bg-light);
+}
+
+.quick-nav-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s var(--transition);
+}
+
+.quick-nav-grid.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--secondary);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 130px;
+    height: 130px;
+    transition: all 0.4s var(--transition);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    background: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+}
+
+.nav-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.nav-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.fidelity-btn {
+    background: #fff;
+    border: 1px solid var(--secondary);
+}
+
+.delivery-btn {
+    background: #fff;
+    border: 1px solid #142328; /* Uber Eats vibe */
+}
+
+.nav-item:hover .nav-icon {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+    .quick-nav-grid {
+        gap: 1rem;
+    }
+    .nav-item {
+        width: calc(50% - 1rem);
+        height: 110px;
+        padding: 1rem;
+    }
+    .nav-icon {
+        font-size: 1.8rem;
+    }
+}
+
 .nav-links {
     display: flex;
     align-items: center;
