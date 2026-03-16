@@ -121,6 +121,66 @@ body {
     100% { transform: translateX(-50%); }
 }
 
+/* Food Belt Carousel (Sushi Style) */
+.food-belt {
+    padding: 3rem 0;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.belt-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.belt-track {
+    display: flex;
+    gap: 2.5rem;
+    animation: sushiBelt 40s linear infinite;
+    padding-left: 2.5rem;
+}
+
+.belt-item {
+    flex: 0 0 350px;
+    height: 240px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+    background: white;
+    padding: 10px; /* Plate effect */
+    transition: transform 0.4s var(--transition);
+}
+
+.belt-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.8s var(--transition);
+}
+
+.belt-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.belt-item:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes sushiBelt {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+    .belt-item {
+        flex: 0 0 250px;
+        height: 180px;
+    }
+}
+
+
 /* Quick Nav Section */
 .quick-nav {
     padding: 3rem 0;
@@ -278,193 +338,50 @@ body {
 }
 
 /* Hero Section - Solid Pastel */
-/* Hero Carousel */
-.hero-carousel {
-    height: 80vh;
-    position: relative;
-    overflow: hidden;
-    margin-top: 60px;
-}
-
-.carousel-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.hero {
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
-}
-
-.slide-content {
+    background: var(--primary);
     position: relative;
-    z-index: 10;
-    color: white;
-    padding: 2rem;
+    padding-top: 60px;
+    overflow: hidden;
 }
 
-.slide-content h1 {
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-family: 'DM Serif Display', serif;
-    margin-bottom: 1rem;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-.slide-content p {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-/* Carousel Navigation */
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.1);
-    color: white;
-    border: none;
-    padding: 1.5rem 1rem;
-    cursor: pointer;
-    z-index: 20;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-    font-size: 1.5rem;
-}
-
-.carousel-nav:hover {
-    background: white;
-    color: var(--secondary);
-}
-
-.carousel-nav.prev { left: 0; border-radius: 0 10px 10px 0; }
-.carousel-nav.next { right: 0; border-radius: 10px 0 0 10px; }
-
-.carousel-dots {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
-    z-index: 20;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.dot.active {
-    background: white;
-    transform: scale(1.3);
-}
-
-/* Action Banners */
-.hero-action-banners {
-    padding: 3rem 0;
-    background: var(--bg-light);
-}
-
-.banners-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.banner-link {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background: white;
-    padding: 2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    color: var(--secondary);
-    transition: all 0.4s var(--transition);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.banner-link:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
-
-.banner-icon {
-    font-size: 3rem;
-}
-
-.banner-text h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.3rem;
-}
-
-.banner-text p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.banner-fidelity:hover {
-    border-color: var(--primary);
-    background: linear-gradient(135deg, white 0%, var(--primary) 100%);
-}
-
-.banner-uber:hover {
-    border-color: #142328;
-    color: #142328;
-}
-
-@media (max-width: 768px) {
-    .hero-carousel { height: 60vh; }
-    .banners-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .banner-link { padding: 1.5rem; }
-    .banner-icon { font-size: 2.2rem; }
-    .banner-text h3 { font-size: 1.5rem; }
-}
-
-.hero {
+.hero-overlay {
     display: none;
+}
+
+.logo-hero h1 {
+    font-size: clamp(4rem, 15vw, 8rem);
+    line-height: 0.85;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--secondary);
+    font-family: 'DM Serif Display', serif;
+}
+
+.logo-hero .tagline {
+    display: block;
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.4em; /* Very wide as in the logo image */
+    font-weight: 400;
+    color: var(--secondary);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-family: 'Bodoni Moda', serif; /* Using a clean serif for the tagline */
+}
+
+.hero-desc {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    opacity: 0.8;
 }
 
 /* Identity Section */

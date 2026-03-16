@@ -153,40 +153,53 @@ const modalAllergens = document.getElementById('modal-allergens');
 const modalImg = document.getElementById('modal-img');
 const closeModal = document.querySelector('.close-modal');
 
-// Open Modal logic
+// Open Modal logic for cards
 document.querySelectorAll('.product-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', () => {
         const title = card.querySelector('h3').innerText;
-        const details = productDetails[title];
-        const cardImg = card.querySelector('img').src; // Get exact img from card
-
-        if (details) {
-            modalTitle.innerText = title;
-            modalDesc.innerText = details.description;
-            modalImg.src = cardImg;
-            modalImg.alt = title;
-
-            // Clear and add allergens with labels
-            modalAllergens.innerHTML = '';
-            details.allergens.forEach(type => {
-                const info = allergenInfo[type];
-                if (info) {
-                    const item = document.createElement('div');
-                    item.className = 'allergen-item';
-                    item.innerHTML = `
-                        <span class="allergen-icon">${info.icon}</span>
-                        <span class="allergen-name">${info.name}</span>
-                    `;
-                    modalAllergens.appendChild(item);
-                }
-            });
-
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+        openProductModal(title, card.querySelector('img').src);
     });
 });
+
+// Open Modal logic for belt items
+document.querySelectorAll('.belt-item').forEach(item => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const title = img.alt;
+        openProductModal(title, img.src);
+    });
+});
+
+function openProductModal(title, imageSrc) {
+    const details = productDetails[title];
+
+    if (details) {
+        modalTitle.innerText = title;
+        modalDesc.innerText = details.description;
+        modalImg.src = imageSrc;
+        modalImg.alt = title;
+
+        // Clear and add allergens with labels
+        modalAllergens.innerHTML = '';
+        details.allergens.forEach(type => {
+            const info = allergenInfo[type];
+            if (info) {
+                const item = document.createElement('div');
+                item.className = 'allergen-item';
+                item.innerHTML = `
+                    <span class="allergen-icon">${info.icon}</span>
+                    <span class="allergen-name">${info.name}</span>
+                `;
+                modalAllergens.appendChild(item);
+            }
+        });
+
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+}
 
 // Close Modal logic
 if (closeModal) {
@@ -194,67 +207,6 @@ if (closeModal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
     });
-}
-
-// Carousel Functionality
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-const prevBtn = document.querySelector('.carousel-nav.prev');
-const nextBtn = document.querySelector('.carousel-nav.next');
-let currentSlide = 0;
-let slideInterval;
-
-function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-function startAutoPlay() {
-    slideInterval = setInterval(nextSlide, 4000); // 4 seconds
-}
-
-function stopAutoPlay() {
-    clearInterval(slideInterval);
-}
-
-if (slides.length > 0) {
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoPlay();
-        startAutoPlay();
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
-            stopAutoPlay();
-            startAutoPlay();
-        });
-    });
-
-    const carouselContainer = document.querySelector('.carousel-container');
-    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-    carouselContainer.addEventListener('mouseleave', startAutoPlay);
-
-    startAutoPlay();
 }
 
 // Close on outside click

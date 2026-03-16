@@ -35,88 +35,48 @@
         </div>
     </nav>
 
-    <header id="inicio" class="hero-carousel">
-        <div class="carousel-container">
-            <!-- Slide 1: Featured Products -->
-            <div class="slide active">
-                <img src="assets/lotus-new.jpg" alt="Productos Amargo">
-                <div class="slide-content">
-                    <h1>Sabor con Flow</h1>
-                    <p>Pastelería artesanal en Tenerife</p>
-                </div>
+    <header id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-hero">
+                <h1 class="reveal-text">Amargo</h1>
+                <span class="tagline reveal-text delay-1">Pastelería Artesanal</span>
             </div>
-            <!-- Slide 2: Local Vibe -->
-            <div class="slide">
-                <img src="assets/shop-vibe.png" alt="Nuestro Local">
-                <div class="slide-content">
-                    <h1>Nuestra Casa</h1>
-                    <p>Un espacio diseñado para disfrutar</p>
-                </div>
+            <p class="hero-desc reveal-text delay-2">Sabor que enamora con flow</p>
+            <div class="hero-btns reveal-text delay-3">
+                <a href="#postres" class="btn-gold">Explorar Dulces</a>
+                <a href="#contacto" class="btn-outline">Ver Horario</a>
             </div>
-            <!-- Slide 3: Happy Hippo -->
-            <div class="slide">
-                <img src="assets/happy-hippo.jpg" alt="Colección Kinder">
-                <div class="slide-content">
-                    <h1>Colección Kinder</h1>
-                    <p>Felicidad en cada bocado</p>
-                </div>
-            </div>
-            <!-- Slide 4: Cookies -->
-            <div class="slide">
-                <img src="assets/cookies-stack.jpg" alt="Cookies Artesanales">
-                <div class="slide-content">
-                    <h1>Cookies de Autor</h1>
-                    <p>Recién horneadas con amor</p>
-                </div>
-            </div>
-            <!-- Slide 5: Horarios -->
-            <div class="slide">
-                <img src="assets/schedule-bg.png" alt="Horarios">
-                <div class="slide-content">
-                    <h1>Visítanos</h1>
-                    <p>Consulta nuestro horario de apertura</p>
-                </div>
-            </div>
-
-            <button class="carousel-nav prev" aria-label="Anterior">&#10094;</button>
-            <button class="carousel-nav next" aria-label="Siguiente">&#10095;</button>
-
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
         </div>
     </header>
-
-    <div class="hero-action-banners">
-        <div class="container">
-            <div class="banners-grid">
-                <a href="https://signup.comeback.es/eba79c0d/86e3dbdc-4e39-4804-93c1-ea08669fde09/createCustomer?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnqPUaHESk97N_SccOyjEyk6MaaD_NZOR4cgIHcRXCsKaVZg3VlXFY-ytShn0_aem_d23dOoO1BN3amO8nbQUObA" class="banner-link banner-fidelity" target="_blank">
-                    <span class="banner-icon">✨</span>
-                    <div class="banner-text">
-                        <h3>Tarjeta de Fidelidad</h3>
-                        <p>Únete y acumula premios</p>
-                    </div>
-                </a>
-                <a href="https://www.ubereats.com/es/store/amargo-pasteleria-artesanal/pu1mv7tVRCO7LjJxdFHmsA?srsltid=AfmBOorrGtc30ixRAMzOmyw2jugiNMvczenB0BKQlwqBlxpetL8f5W1K" class="banner-link banner-uber" target="_blank">
-                    <span class="banner-icon">🛵</span>
-                    <div class="banner-text">
-                        <h3>Uber Eats</h3>
-                        <p>Pide tus dulces a domicilio</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <div class="marquee-container">
         <div class="marquee-content">
             ✦ PASTELERÍA ARTESANAL ✦ DISEÑO DE AUTOR ✦ TENERIFE SUR ✦ CADA BOCADO UNA HISTORIA ✦ AMARGO FLOW ✦ PASTELERÍA ARTESANAL ✦ DISEÑO DE AUTOR ✦ TENERIFE SUR ✦ CADA BOCADO UNA HISTORIA ✦ AMARGO FLOW ✦ 
         </div>
     </div>
+
+    <!-- Food Belt Carousel (Sushi Tray Style) -->
+    <section class="food-belt">
+        <div class="belt-wrapper">
+            <div class="belt-track">
+                <div class="belt-item"><img src="assets/lotus-new.jpg" alt="Lotus Cheesecake"></div>
+                <div class="belt-item"><img src="assets/happy-hippo.jpg" alt="Colección Happy Hippo"></div>
+                <div class="belt-item"><img src="assets/cookies-stack.jpg" alt="Variedad de Autor"></div>
+                <div class="belt-item"><img src="assets/tiramisu-multi.png" alt="Tiramisú Amargo"></div>
+                <div class="belt-item"><img src="assets/cookies-nutella.jpg" alt="Nutella Heart"></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="belt-item"><img src="assets/lotus-new.jpg" alt="Lotus Cheesecake"></div>
+                <div class="belt-item"><img src="assets/happy-hippo.jpg" alt="Colección Happy Hippo"></div>
+                <div class="belt-item"><img src="assets/cookies-stack.jpg" alt="Variedad de Autor"></div>
+                <div class="belt-item"><img src="assets/tiramisu-multi.png" alt="Tiramisú Amargo"></div>
+                <div class="belt-item"><img src="assets/cookies-nutella.jpg" alt="Nutella Heart"></div>
+            </div>
+        </div>
+    </section>
 
     <section class="quick-nav">
         <div class="container">
