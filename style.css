@@ -1332,6 +1332,127 @@ body {
     }
 }
 
+/* Reviews Carousel */
+.reviews-section {
+    padding: 3rem 0;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.review-belt-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.review-belt-wrapper::before,
+.review-belt-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+.review-belt-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-light), transparent);
+}
+.review-belt-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-light), transparent);
+}
+
+.review-belt-track {
+    display: flex;
+    gap: 2rem;
+    padding-left: 2rem;
+    animation: reviewBelt 45s linear infinite;
+}
+
+.review-item {
+    flex: 0 0 450px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.4s;
+}
+
+.review-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'DM Serif Display', serif;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-info h4 {
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem 0;
+    color: var(--secondary);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.reviewer-info span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.review-stars {
+    color: #fbbc04; /* Google solid star color */
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+@keyframes reviewBelt {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1rem)); } 
+}
+
+@media (max-width: 768px) {
+    .review-item {
+        flex: 0 0 320px;
+        padding: 1.5rem;
+    }
+}
+
 @media (max-width: 480px) {
     .product-bar {
         grid-template-columns: 1fr; /* Full width on very small phones */
