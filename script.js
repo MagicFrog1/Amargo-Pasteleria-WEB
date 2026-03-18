@@ -94,20 +94,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Product Details Data
 const productDetails = {
-    'Lotus Cheesecake': {
-        description: 'Nuestras mini Lotus Cheesecakes se presentan en moldes individuales de madera, manteniendo toda la cremosidad y el sabor intenso de la galleta Biscoff original. La opción perfecta para un capricho individual.',
-        allergens: ['grains', 'milk', 'eggs', 'nuts']
-    },
-    'Tiramisú Amargo': {
-        description: 'El clásico italiano con el toque Amargo. Bizcocho savoiardi empapado en café de especialidad recién tostado, capas de crema de mascarpone auténtico y una lluvia final de cacao puro. Elegancia en cada cucharada.',
+    'Cheesecake Clásica': {
+        description: 'La receta clásica horneada lentamente para conseguir un interior sedoso, con una sutil capa tostada por encima que aporta el contraste perfecto en cada cucharada.',
         allergens: ['grains', 'milk', 'eggs']
     },
-    'Biscoff Delight': {
-        description: 'La máxima expresión del sabor Biscoff. Un postre individual diseñado para los amantes del caramelo, con un corazón líquido de crema de galleta y una cobertura suave tipo mousse.',
-        allergens: ['grains', 'milk', 'nuts']
+    'Cheesecake de Pistacho': {
+        description: 'Una versión premium de nuestro cheesecake clásico elaborada con crema pura de pistacho de máxima calidad y trocitos que aportan textura.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
-    'Colección Happy Hippo': {
-        description: 'Para los auténticos fans de Kinder: una experiencia completa que incluye nuestro cheesecake cremoso, un brownie intenso y una cookie artesanal, todo coronado con el icónico Happy Hippo y un milkshake irresistible.',
+    'Cheesecake Lotus': {
+        description: 'El equilibrio soñado: nuestro suave queso crema sobre una base crujiente de galleta Lotus Biscoff, bañada en su característica crema caramelizada.',
+        allergens: ['grains', 'milk', 'eggs']
+    },
+    'Cheesecake Ferrero': {
+        description: 'Para esos momentos donde solo el chocolate sirve. Delicado cheesecake coronado con praliné de avellanas, chocolate fundido y crujiente Rocher.',
         allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
     'Mundo de Ensueño': {
@@ -126,13 +126,45 @@ const productDetails = {
         description: 'Nuestra tarta más romántica. Adornada con flores frescas seleccionadas y pétalos comestibles, con capas de sabor delicado que evocan un jardín en plena primavera.',
         allergens: ['grains', 'milk', 'flowers']
     },
-    'Variedad de Autor': {
-        description: 'Explora nuestro arcoíris de sabores: desde la vibrante Blue Oreo y la clásica Red Velvet hasta combinaciones de tres chocolates. La torre perfecta para los indecisos que lo quieren probar todo.',
+    'Kinder': {
+        description: 'Una cookie espectacular coronada con el sabor inconfundible de Kinder. La mezcla perfecta de masa artesana con un corazón súper cremoso.',
         allergens: ['grains', 'milk', 'eggs', 'nuts']
     },
-    'Nutella Heart': {
-        description: 'Nuestra masa secreta de cookie dorada y crujiente que esconde un generoso interior de auténtica Nutella fluida. Horneadas diariamente para garantizar ese corazón derretido.',
-        allergens: ['grains', 'milk', 'nuts']
+    'Lotus': {
+        description: 'El sabor caramelizado de Biscoff llevado al siguiente nivel con base de galleta y nuestra crema especial. Para los verdaderos amantes del Lotus.',
+        allergens: ['grains', 'milk', 'eggs']
+    },
+    'Cookie Monster': {
+        description: 'Nuestra divertida e icónica cookie azul, crujiente por fuera y súper tierna por dentro. Coronada y rellena de auténtica galleta.',
+        allergens: ['grains', 'milk', 'eggs']
+    },
+    'Oreo': {
+        description: 'Para los incondicionales del cookies & cream: masa artesana con trozos de galleta y crema de la clásica galleta negra y blanca.',
+        allergens: ['grains', 'milk', 'eggs']
+    },
+    'Dubai': {
+        description: 'Inspirada en el sabor viral. Masa de cacao intenso que esconde un interior crujiente de fina knafeh y crema de pistacho.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
+    },
+    'Chocolate blanco y pistacho': {
+        description: 'Una masa suave y crujiente llena de pepitas de chocolate blanco, horneada a la perfección para abrazar un corazón fluido de pura crema de pistacho.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
+    },
+    'Chocolate y pistacho': {
+        description: 'Masa dorada elaborada con trozos fundidos del mejor chocolate, que contrasta maravillosamente con su relleno cremoso 100% de pistacho.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
+    },
+    'Red velvet': {
+        description: 'Nuestra versión del clásico postre americano en formato cookie. Masa roja aterciopelada y un jugoso centro de suave crema de vainilla.',
+        allergens: ['grains', 'milk', 'eggs']
+    },
+    'Nutella': {
+        description: 'El clásico indiscutible que nunca falla. Masa artesanal con un centro muy abundante de crema de avellanas con cacao (¡Nutella real!) que se derrite al partirla.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
+    },
+    'White Macadamia': {
+        description: 'Masa suave y dorada llena de dulces pepitas de chocolate blanco que contrarrestan el toque tostado y crujiente de las nueces de macadamia.',
+        allergens: ['grains', 'milk', 'eggs', 'nuts']
     }
 };
 
