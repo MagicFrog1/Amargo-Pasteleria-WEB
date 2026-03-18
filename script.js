@@ -94,6 +94,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Product Details Data
 const productDetails = {
+    'Lotus Cheesecake': {
+        description: 'Una de nuestras cheesecakes más queridas, hecha con el inconfundible sabor a Lotus Biscoff y una textura espectacular.',
+        allergens: ['grains', 'milk']
+    },
+    'Colección Happy Hippo': {
+        description: 'La fusión perfecta del clásico Kinder Happy Hippo en un postre artesanal muy crujiente y dulce.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
+    'Variedad de Autor': {
+        description: 'Una selección exclusiva de nuestras mejores cookies, perfectas para probar diferentes sabores con el toque característico de Amargo.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
+    'Tiramisú Amargo': {
+        description: 'Nuestra reinterpretación del postre italiano clásico, con café de especialidad y capas de crema mascarpone irresistible.',
+        allergens: ['grains', 'milk']
+    },
+    'Nutella Heart': {
+        description: 'Un corazón rebosante de auténtica Nutella que fluye desde el primer bocado. Totalmente irresistible.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
     'Cheesecake Clásica': {
         description: 'La receta clásica horneada lentamente para conseguir un interior sedoso, con una sutil capa tostada por encima que aporta el contraste perfecto en cada cucharada.',
         allergens: ['grains', 'milk']
