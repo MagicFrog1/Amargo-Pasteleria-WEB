@@ -1533,6 +1533,32 @@ body {
     font-family: 'Bodoni Moda', serif;
 }
 
+.btn-location {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #ffffff !important;
+    color: var(--secondary) !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: all 0.4s var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    text-decoration: none;
+}
+
+.btn-location:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    background: #ffffff !important;
+    color: var(--secondary) !important;
+}
+
 @media (max-width: 768px) {
     .review-item {
         flex: 0 0 320px;
