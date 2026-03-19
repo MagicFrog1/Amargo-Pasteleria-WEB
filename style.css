@@ -227,8 +227,23 @@ body {
 }
 
 .nav-icon {
-    font-size: 2.2rem;
-    margin-bottom: 0.8rem;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: filter 0.4s var(--transition);
+}
+
+.nav-item:hover .nav-icon img {
+    filter: invert(1);
 }
 
 .nav-label {
