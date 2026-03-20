@@ -1014,6 +1014,14 @@ body {
     font-weight: 400;
 }
 
+/* Neutralize auto-detected phone numbers by mobile browsers */
+.schedule-body .hours a {
+    color: inherit !important;
+    text-decoration: none !important;
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
 .schedule-body .closed {
     font-weight: 700;
 }
@@ -1604,5 +1612,51 @@ body {
     }
     .product-image {
         height: 200px;
+    }
+}
+
+/* Milkshakes Section Styles */
+.milkshakes-info {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.milk-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.milk-flavors h3 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.milk-flavors p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: var(--secondary);
+    letter-spacing: 0.5px;
+}
+
+/* stars-nav quick nav icon */
+.stars-nav {
+    display: flex;
+    gap: 2px;
+    color: #ffd700; /* Gold */
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .milk-flavors p {
+        font-size: 1.1rem;
+    }
+    .stars-nav {
+        font-size: 0.9rem;
     }
 }
