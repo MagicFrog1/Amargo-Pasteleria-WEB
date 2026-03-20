@@ -1696,7 +1696,7 @@ body {
     pointer-events: none;
 }
 
-.collage-item {
+.collage-static {
     position: absolute;
     width: 140px;
     height: 140px;
@@ -1704,45 +1704,38 @@ body {
     border-radius: 20px;
     box-shadow: 0 12px 25px rgba(0,0,0,0.18);
     border: 4px solid white;
-    transition: all 0.4s var(--transition);
-    pointer-events: auto;
-    cursor: pointer;
+    pointer-events: none; /* Make static and non-clickable */
+    z-index: 2;
 }
 
-.collage-item.c1 {
-    top: 15%;
-    right: -20px;
+.collage-static.c1 {
+    top: 5%;
+    right: -30px;
     transform: rotate(8deg);
 }
 
-.collage-item.c2 {
-    bottom: 10%;
-    right: 40px;
+.collage-static.c2 {
+    bottom: 5%;
+    right: -20px;
     transform: rotate(-12deg);
     width: 160px;
     height: 160px;
 }
 
-.collage-item.c3 {
+.collage-static.c3 {
     top: 50%;
-    right: -10px;
+    right: -15px;
     transform: translateY(-50%) rotate(-5deg);
     width: 130px;
     height: 130px;
 }
 
-.collage-item:hover {
-    transform: scale(1.1) rotate(0deg) !important;
-    z-index: 10;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
 @media (max-width: 1024px) {
-    .collage-item {
+    .collage-static {
         width: 100px;
         height: 100px;
     }
-    .collage-item.c2 {
+    .collage-static.c2 {
         width: 120px;
         height: 120px;
     }
@@ -1752,14 +1745,14 @@ body {
     .featured-images-area {
         height: 400px;
     }
-    .collage-item {
-        width: 110px;
-        height: 110px;
-        right: 10px !important;
+    .collage-static {
+        width: 90px;
+        height: 90px;
+        right: 0 !important;
     }
-    .collage-item.c1 { top: 10%; right: 10px; }
-    .collage-item.c2 { bottom: 10%; right: 20px; width: 130px; height: 130px; }
-    .collage-item.c3 { top: 50%; right: -5px; width: 100px; height: 100px; }
+    .collage-static.c1 { top: 5%; right: -10px !important; }
+    .collage-static.c2 { bottom: 5%; right: -10px !important; width: 110px; height: 110px; }
+    .collage-static.c3 { top: 50%; right: -10px !important; width: 80px; height: 80px; }
 }
 
 /* Featured Spotlight Section */

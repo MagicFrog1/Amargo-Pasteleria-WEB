@@ -254,11 +254,11 @@ if (cookieIceCream) {
     });
 }
 
-// Open Modal for Milkshake Spotlight and Collage items
-document.querySelectorAll('.main-featured-image, .collage-item').forEach(el => {
+// Open Modal for Milkshake Spotlight main image
+document.querySelectorAll('.main-featured-image').forEach(el => {
     el.style.cursor = 'pointer';
     el.addEventListener('click', () => {
-        const img = el.tagName === 'IMG' ? el : el.querySelector('img');
+        const img = el.querySelector('img');
         if (img) {
             const title = img.alt;
             openProductModal(title, img.src);
