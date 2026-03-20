@@ -185,6 +185,26 @@ const productDetails = {
     'White Macadamia': {
         description: 'Masa suave y dorada llena de dulces pepitas de chocolate blanco que contrarrestan el toque tostado y crujiente de las nueces de macadamia.',
         allergens: ['grains', 'milk', 'nuts']
+    },
+    'Milkshake Oreo': {
+        description: 'Batido cremoso de helado de vainilla y leche mezclado con trozos de galleta Oreo, coronado con nata montada y sirope de chocolate.',
+        allergens: ['grains', 'milk']
+    },
+    'Milkshake Happy Hippo': {
+        description: 'Nuestro batido más crujiente con el sabor inconfundible de Kinder Happy Hippo, crema de avellanas y nata.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
+    'Milkshake Kinder': {
+        description: 'La suavidad del chocolate Kinder en un batido ultra-cremoso. Una experiencia dulce y refrescante única.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
+    'Milkshake Especial': {
+        description: 'Nuestra combinación especial del día. Pregunta por los sabores disponibles y déjate sorprender.',
+        allergens: ['grains', 'milk']
+    },
+    'Cookie con Helado': {
+        description: 'La combinación definitiva: tu cookie favorita servida con dos bolas generosas de helado de vainilla premium y el sirope de tu elección.',
+        allergens: ['grains', 'milk', 'nuts']
     }
 };
 
@@ -223,6 +243,17 @@ document.querySelectorAll('.belt-item').forEach(item => {
         openProductModal(title, img.src);
     });
 });
+
+// Open Modal for featured Cookie con Helado
+const cookieIceCream = document.querySelector('.cookie-icecream-featured');
+if (cookieIceCream) {
+    cookieIceCream.style.cursor = 'pointer';
+    cookieIceCream.addEventListener('click', () => {
+        const title = cookieIceCream.querySelector('h3').innerText;
+        const img = cookieIceCream.querySelector('img').src;
+        openProductModal(title, img);
+    });
+}
 
 function openProductModal(title, imageSrc) {
     const details = productDetails[title];
