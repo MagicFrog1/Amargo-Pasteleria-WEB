@@ -1661,6 +1661,107 @@ body {
     }
 }
 
+/* Milkshake & Cookie Spotlight Refinements */
+.milkshake-featured, .cookie-icecream-featured {
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.featured-images-area {
+    position: relative;
+    height: 500px;
+    background: #fdfdfd;
+}
+
+.main-featured-image {
+    width: 100%;
+    height: 100%;
+}
+
+.main-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.milkshake-collage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.collage-item {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+    border: 4px solid white;
+    transition: all 0.4s var(--transition);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.collage-item.c1 {
+    top: 15%;
+    right: -20px;
+    transform: rotate(8deg);
+}
+
+.collage-item.c2 {
+    bottom: 10%;
+    right: 40px;
+    transform: rotate(-12deg);
+    width: 160px;
+    height: 160px;
+}
+
+.collage-item.c3 {
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%) rotate(-5deg);
+    width: 130px;
+    height: 130px;
+}
+
+.collage-item:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 1024px) {
+    .collage-item {
+        width: 100px;
+        height: 100px;
+    }
+    .collage-item.c2 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-images-area {
+        height: 400px;
+    }
+    .collage-item {
+        width: 110px;
+        height: 110px;
+        right: 10px !important;
+    }
+    .collage-item.c1 { top: 10%; right: 10px; }
+    .collage-item.c2 { bottom: 10%; right: 20px; width: 130px; height: 130px; }
+    .collage-item.c3 { top: 50%; right: -5px; width: 100px; height: 100px; }
+}
+
 /* Featured Spotlight Section */
 .cookie-icecream-featured {
     background: white;

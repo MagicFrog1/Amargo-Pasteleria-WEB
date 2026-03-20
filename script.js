@@ -243,7 +243,6 @@ document.querySelectorAll('.belt-item').forEach(item => {
         openProductModal(title, img.src);
     });
 });
-
 // Open Modal for featured Cookie con Helado
 const cookieIceCream = document.querySelector('.cookie-icecream-featured');
 if (cookieIceCream) {
@@ -254,6 +253,18 @@ if (cookieIceCream) {
         openProductModal(title, img);
     });
 }
+
+// Open Modal for Milkshake Spotlight and Collage items
+document.querySelectorAll('.main-featured-image, .collage-item').forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => {
+        const img = el.tagName === 'IMG' ? el : el.querySelector('img');
+        if (img) {
+            const title = img.alt;
+            openProductModal(title, img.src);
+        }
+    });
+});
 
 function openProductModal(title, imageSrc) {
     const details = productDetails[title];
