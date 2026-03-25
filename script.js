@@ -81,7 +81,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const href = this.getAttribute('href');
         if (href === '#') return;
-        
+
         const target = document.querySelector(href);
         if (target) {
             window.scrollTo({
@@ -98,12 +98,12 @@ const productDetails = {
         description: 'Una de nuestras cheesecakes más queridas, hecha con el inconfundible sabor a Lotus Biscoff y una textura espectacular.',
         allergens: ['grains', 'milk']
     },
-    'Colección Happy Hippo': {
-        description: 'La fusión perfecta del clásico Kinder Happy Hippo en un postre artesanal muy crujiente y dulce.',
+    'Happy Hippo': {
+        description: 'El Chocolate kinder más querido convertido en cookie, relleno, cremoso de avellana, junto con chocolate y Happy Hippo',
         allergens: ['grains', 'milk', 'nuts']
     },
-    'Variedad de Autor': {
-        description: 'Una selección exclusiva de nuestras mejores cookies, perfectas para probar diferentes sabores con el toque característico de Amargo.',
+    'Cookies': {
+        description: 'Nuestras icónicas NY style cookies de 150gr con un exterior crujiente e interior suave rellenas de distintos sabores',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Tiramisú Amargo': {
@@ -115,19 +115,27 @@ const productDetails = {
         allergens: ['grains', 'milk', 'nuts']
     },
     'Cheesecake Clásica': {
-        description: 'La receta clásica horneada lentamente para conseguir un interior sedoso, con una sutil capa tostada por encima que aporta el contraste perfecto en cada cucharada.',
+        description: 'La de toda la vida, simple y con sabor a queso suave que se adapta a todos los paladares',
         allergens: ['grains', 'milk']
+    },
+    'Cheesecake Chocolate blanco y pistacho': {
+        description: 'Sabor suave de pistacho que combina perfectamente con la dulzura del chocolate blanco, perfecta para los amantes del dulce',
+        allergens: ['grains', 'milk', 'nuts']
     },
     'Cheesecake de Pistacho': {
         description: 'Una versión premium de nuestro cheesecake clásico elaborada con crema pura de pistacho de máxima calidad y trocitos que aportan textura.',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Cheesecake Lotus': {
-        description: 'El equilibrio soñado: nuestro suave queso crema sobre una base crujiente de galleta Lotus Biscoff, bañada en su característica crema caramelizada.',
+        description: 'Nuestra tarta de queso, rellena de auténtica crema de Lotus Bisscoff',
         allergens: ['grains', 'milk']
     },
     'Cheesecake Ferrero': {
         description: 'Para esos momentos donde solo el chocolate sirve. Delicado cheesecake coronado con praliné de avellanas, chocolate fundido y crujiente Rocher.',
+        allergens: ['grains', 'milk', 'nuts']
+    },
+    'Cheesecake Happy Hippo': {
+        description: 'Nuestra tarta rellena de crema de avellanas con un crujiente de chocolate blanco combinado con la cremosidad de la tarta transmite una experiencia en boca increíble',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Mundo de Ensueño': {
@@ -147,19 +155,19 @@ const productDetails = {
         allergens: ['grains', 'milk', 'flowers']
     },
     'Kinder': {
-        description: 'Una cookie espectacular coronada con el sabor inconfundible de Kinder. La mezcla perfecta de masa artesana con un corazón súper cremoso.',
+        description: 'Nuestra cookie de vainilla rellena con una crema de avellana blanca y kinder',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Lotus': {
-        description: 'El sabor caramelizado de Biscoff llevado al siguiente nivel con base de galleta y nuestra crema especial. Para los verdaderos amantes del Lotus.',
+        description: 'El sabor más viral de los últimos tiempos, junto con trocitos de chocolate blanco, creando una combinación mágica',
         allergens: ['grains', 'milk']
     },
     'Cookie Monster': {
-        description: 'Nuestra divertida e icónica cookie azul, crujiente por fuera y súper tierna por dentro. Coronada y rellena de auténtica galleta.',
+        description: 'Una icónica cookie azul, crujiente por fuera rellena de queso crema, oreo y chips ajoy',
         allergens: ['grains', 'milk']
     },
     'Oreo': {
-        description: 'Para los incondicionales del cookies & cream: masa artesana con trozos de galleta y crema de la clásica galleta negra y blanca.',
+        description: 'Para los amantes de estas clásicas galletas, nuestra masa de vainilla, rellena de crema de cookies and Cream y oreo',
         allergens: ['grains', 'milk']
     },
     'Dubai': {
@@ -167,19 +175,19 @@ const productDetails = {
         allergens: ['grains', 'milk', 'nuts']
     },
     'Chocolate blanco y pistacho': {
-        description: 'Una masa suave y crujiente llena de pepitas de chocolate blanco, horneada a la perfección para abrazar un corazón fluido de pura crema de pistacho.',
+        description: 'Uno de nuestros bestsellers, crema de pistacho con chocolate blanco junto con trocitos de chocolate blanco',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Chocolate y pistacho': {
-        description: 'Masa dorada elaborada con trozos fundidos del mejor chocolate, que contrasta maravillosamente con su relleno cremoso 100% de pistacho.',
+        description: 'Para los amantes del pistacho y del chocolate, la combinación perfecta, crema de pistacho, cremosa y trocitos de chocolate',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Red velvet': {
-        description: 'Nuestra versión del clásico postre americano en formato cookie. Masa roja aterciopelada y un jugoso centro de suave crema de vainilla.',
+        description: 'Un clásico, masa con un toque, ligero de cacao y un relleno de chocolate blanco y queso crema',
         allergens: ['grains', 'milk']
     },
     'Nutella': {
-        description: 'El clásico indiscutible que nunca falla. Masa artesanal con un centro muy abundante de crema de avellanas con cacao (¡Nutella real!) que se derrite al partirla.',
+        description: 'Uno de los bestsellers, una cookie simple, pero ganadora, rellena el auténtica crema nutella',
         allergens: ['grains', 'milk', 'nuts']
     },
     'White Macadamia': {
@@ -311,13 +319,72 @@ window.addEventListener('click', (e) => {
     }
 });
 
+// Countdown for Semana Santa
+const initCountdown = () => {
+    // Restoring the original date for the real reveal
+    const countdownDate = new Date("March 29, 2026 00:00:00").getTime();
+    let revealed = false;
+
+    const revealContent = () => {
+        if (revealed) return;
+        revealed = true;
+
+        const mysteryItems = document.querySelectorAll('.mystery-item');
+        mysteryItems.forEach((item, index) => {
+            // Apply a subtle reveal animation to the cards
+            setTimeout(() => {
+                item.classList.add('reveal-celebration', 'reveal-pulse');
+
+                const img = item.querySelector('img');
+                if (img && img.dataset.revealSrc) {
+                    img.src = img.dataset.revealSrc;
+                    img.style.filter = 'none';
+                    img.style.opacity = '1';
+                }
+
+                // Keep the original text as requested by the user
+            }, index * 100);
+        });
+    };
+
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        if (distance < 0) {
+            // Fill with zeros
+            document.querySelectorAll('.count').forEach(el => el.innerText = "00");
+            revealContent();
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minutesEl = document.getElementById("minutes");
+        const secondsEl = document.getElementById("seconds");
+
+        if (daysEl) daysEl.innerText = days < 10 ? "0" + days : days;
+        if (hoursEl) hoursEl.innerText = hours < 10 ? "0" + hours : hours;
+        if (minutesEl) minutesEl.innerText = minutes < 10 ? "0" + minutes : minutes;
+        if (secondsEl) secondsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
+    };
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+};
+
 // Hero Background Carousel Logic
 const initHeroCarousel = () => {
     const slides = document.querySelectorAll('.hero-bg-slide');
     if (slides.length === 0) return;
-    
+
     let currentSlide = 0;
-    
+
     setInterval(() => {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
@@ -328,4 +395,5 @@ const initHeroCarousel = () => {
 // Initialize carousels and observers
 document.addEventListener('DOMContentLoaded', () => {
     initHeroCarousel();
+    initCountdown();
 });
