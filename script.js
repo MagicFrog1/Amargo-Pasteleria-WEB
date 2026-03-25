@@ -211,7 +211,7 @@ const productDetails = {
         allergens: ['grains', 'milk']
     },
     'Cookie con Helado': {
-        description: 'La combinación definitiva: tu cookie favorita servida con dos bolas generosas de helado de vainilla premium y el sirope de tu elección.',
+        description: 'La mejor manera de comerte una cookie con calor.\nElige tu cookie favorita con 2 bolas de helado de vainilla y acompañada de tu sirope favorito',
         allergens: ['grains', 'milk', 'nuts']
     }
 };
