@@ -138,21 +138,21 @@ const productDetails = {
         description: 'Nuestra tarta rellena de crema de avellanas con un crujiente de chocolate blanco combinado con la cremosidad de la tarta transmite una experiencia en boca increíble',
         allergens: ['grains', 'milk', 'nuts']
     },
-    'Mundo de Ensueño': {
-        description: 'Tartas diseñadas para transportarte a un cuento de hadas. Personalizamos cada detalle, desde personajes favoritos hasta decoraciones hechas a mano en azúcar. El límite es tu imaginación.',
+    'Cumpleaños': {
+        description: 'Nuestras tartas de cumpleaños combinan sabor y diseño para hacer tu día aún más especial. Elige entre diferentes sabores y personalízala a tu gusto para sorprender.',
         allergens: ['grains', 'milk']
     },
-    'Elegancia Violeta': {
-        description: 'Una tarta sofisticada que destaca por su color y sabor. Relleno de frutos rojos y crema ligera de vainilla, decorada con un degradado en tonos violeta y detalles dorados.',
+    'Tartas para bodas': {
+        description: 'Creamos tartas de boda elegantes y únicas, diseñadas a medida para reflejar vuestro estilo. Un equilibrio perfecto entre estética y sabor en un día inolvidable.',
         allergens: ['grains', 'milk']
     },
-    'Estilo y Carácter': {
-        description: 'Para quienes buscan algo diferente. Tartas con texturas geométricas y acabados modernos, ideales para eventos corporativos o celebraciones con un toque de autor.',
+    'Tartas para comuniones': {
+        description: 'Tartas delicadas y personalizadas para un momento tan especial como la comunión. Diseños cuidados y sabores irresistibles que encantarán a todos.',
         allergens: ['grains', 'milk', 'nuts']
     },
-    'Jardín de Dulzura': {
-        description: 'Nuestra tarta más romántica. Adornada con flores frescas seleccionadas y pétalos comestibles, con capas de sabor delicado que evocan un jardín en plena primavera.',
-        allergens: ['grains', 'milk', 'flowers']
+    'Tartas infantiles': {
+        description: 'Tartas divertidas y llenas de color, pensadas para los más pequeños. Diseños temáticos y sabores deliciosos que harán su celebración mágica.',
+        allergens: ['grains', 'milk']
     },
     'Kinder': {
         description: 'Nuestra cookie de vainilla rellena con una crema de avellana blanca y kinder',
