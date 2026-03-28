@@ -321,30 +321,29 @@ window.addEventListener('click', (e) => {
 
 // Countdown for Semana Santa
 const initCountdown = () => {
-    // Restoring the original date for the real reveal
-    const countdownDate = new Date("March 29, 2026 00:00:00").getTime();
+    // Reveal date: Tuesday, March 31, 2026 at 10:00 AM
+    const countdownDate = new Date("March 31, 2026 10:00:00").getTime();
     let revealed = false;
 
     const revealContent = () => {
         if (revealed) return;
         revealed = true;
 
-        const mysteryItems = document.querySelectorAll('.mystery-item');
-        mysteryItems.forEach((item, index) => {
-            // Apply a subtle reveal animation to the cards
-            setTimeout(() => {
-                item.classList.add('reveal-celebration', 'reveal-pulse');
+        const revealImg = document.getElementById('semana-santa-reveal-img');
+        const statusText = document.getElementById('semana-santa-status-text');
+        const revealMsg = document.getElementById('semana-santa-reveal-msg');
 
-                const img = item.querySelector('img');
-                if (img && img.dataset.revealSrc) {
-                    img.src = img.dataset.revealSrc;
-                    img.style.filter = 'none';
-                    img.style.opacity = '1';
-                }
+        if (revealImg) {
+            revealImg.parentElement.classList.add('reveal-celebration', 'reveal-pulse');
+            if (revealImg.dataset.revealSrc) {
+                revealImg.src = revealImg.dataset.revealSrc;
+                revealImg.style.filter = 'none';
+                revealImg.style.opacity = '1';
+            }
+        }
 
-                // Keep the original text as requested by the user
-            }, index * 100);
-        });
+        if (statusText) statusText.style.display = 'none';
+        if (revealMsg) revealMsg.style.display = 'block';
     };
 
     const updateCountdown = () => {

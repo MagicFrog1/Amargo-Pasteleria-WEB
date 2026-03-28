@@ -114,19 +114,12 @@
                     </div>
                 </div>
                 <div class="mystery-grid">
-                    <div class="mystery-row row-4">
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/cookie-kinder.jpg.jpeg" alt="???"><p class="mystery-name" data-reveal-text="Kinder Bueno Special">Próximamente</p></div>
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/cookie-lotus.jpg.jpeg" alt="???"><p class="mystery-name" data-reveal-text="Lotus Dream">Próximamente</p></div>
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/cookie-oreo.jpg.jpeg" alt="???"><p class="mystery-name" data-reveal-text="Oreo Explosion">Próximamente</p></div>
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/cookie-dubai.jpg.jpeg" alt="???"><p class="mystery-name" data-reveal-text="Dubai Gold">Próximamente</p></div>
-                    </div>
-                    <div class="mystery-row row-3">
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/lotus-new.jpg" alt="???"><p class="mystery-name" data-reveal-text="Lotus Original">Próximamente</p></div>
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/cheesecake-pistacho.jpeg" alt="???"><p class="mystery-name" data-reveal-text="Pistacho Heaven">Próximamente</p></div>
-                        <div class="mystery-item"><img src="assets/desenfoque_para_ocultar.png" data-reveal-src="assets/tiramisu-multi.png" alt="???"><p class="mystery-name" data-reveal-text="Tiramisú Amargo">Próximamente</p></div>
+                    <div class="mystery-item" style="width: 100%; max-width: 675px; margin: 0 auto;">
+                        <img src="assets/desenfoque_para_ocultar.png" id="semana-santa-reveal-img" data-reveal-src="assets/Novedades semana santa  .jpeg" alt="Próximamente">
+                        <p id="semana-santa-status-text" class="mystery-name">Próximamente</p>
                     </div>
                 </div>
-                <p class="promo-desc">¡Muy pronto revelaremos estas creaciones exclusivas!</p>
+                <p id="semana-santa-reveal-msg" class="promo-desc" style="display: none; margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem; color: #000;">Estan serán las novedades exclusivas para Semana Santa.</p>
             </div>
         </div>
     </section>
@@ -168,12 +161,11 @@
         <div class="container">
             <div class="identity-grid">
                 <div class="identity-text animate-on-scroll">
-
                     <h2>Esto es Amargo</h2>
                     <p>Amargo, la pastelería familiar fundada en 2025, especializada en cookies, cheesecakes, tartas y otros postres, elaborados artesanalmente en nuestro obrador.</p>
                     <p>Nuestros productos están elaborados sin huevo, manteniendo el mismo sabor, textura y calidad en cada creación</p>
                     <p>Actualmente estamos ubicados en Av. de Ayyo 73, local 13, Adeje, Santa Cruz de Tenerife.</p>
-                    <div style="margin-top: 2rem;">
+                    <div class="btn-location-container" style="margin-top: 2rem;">
                         <a href="https://www.google.com/maps/place/Amargo+-+Pasteler%C3%ADa+Artesanal/@28.1238959,-16.7387658,17z/data=!3m1!4b1!4m6!3m5!1s0xc6a99d41aadfd03:0xad8abecf2bc6e564!8m2!3d28.1238959!4d-16.7387658!16s%2Fg%2F11x2gr97lx!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-location">
                             <span>📍</span> Encuéntranos Aquí
                         </a>
@@ -329,11 +321,25 @@
                                 <div class="size-icon">
                                     <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
                                 </div>
-                                <h4>Pequeña</h4>
+                                <h4>Mini</h4>
                             </div>
                             <div class="size-card-back">
                                 <h4>2 Porciones</h4>
                                 <span class="price">6,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-card">
+                        <div class="size-card-inner">
+                            <div class="size-card-front">
+                                <div class="size-icon">
+                                    <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                                </div>
+                                <h4>Pequeña</h4>
+                            </div>
+                            <div class="size-card-back">
+                                <h4>4 Porciones</h4>
+                                <span class="price">12,00 €</span>
                             </div>
                         </div>
                     </div>
@@ -424,7 +430,7 @@
                         <h3>Milkshake Happy Hippo</h3>
                         <p class="desc">Batidos de helado de vainilla, leche y tu chocolate favorito acompañado de sirope de chocolate y nata</p>
                         <div class="flavors-list">
-                            <h4>SABORES:</h4>
+                            <h4>OTROS SABORES:</h4>
                             <p>KitKat ✦ Kinder ✦ Oreo ✦ Bounty ✦ Happy Hippo ✦ M&M's ✦ Maltesers</p>
                         </div>
                     </div>
@@ -462,19 +468,19 @@
 
             <div class="product-bar">
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image"><img src="assets/tarta-morada.png" alt="Cumpleaños" class="cropped-img"></div>
+                    <div class="product-image"><img src="assets/tarta-cumpleaños.jpeg" alt="Cumpleaños" class="cropped-img"></div>
                     <div class="product-info"><h3>Cumpleaños</h3><p>Nuestras tartas de cumpleaños combinan sabor y diseño para hacer tu día aún más especial. Elige entre diferentes sabores y personalízala a tu gusto para sorprender.</p></div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image"><img src="assets/tarta-puro.png" alt="Bodas" class="cropped-img"></div>
+                    <div class="product-image"><img src="assets/tarta-bodas.jpeg" alt="Bodas" class="contain-img"></div>
                     <div class="product-info"><h3>Tartas para bodas</h3><p>Creamos tartas de boda elegantes y únicas, diseñadas a medida para reflejar vuestro estilo. Un equilibrio perfecto entre estética y sabor en un día inolvidable.</p></div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image"><img src="assets/tarta-flores.png" alt="Comuniones" class="cropped-img"></div>
+                    <div class="product-image"><img src="assets/tarta-comuniones .jpeg" alt="Comuniones" class="cropped-img"></div>
                     <div class="product-info"><h3>Tartas para comuniones</h3><p>Tartas delicadas y personalizadas para un momento tan especial como la comunión. Diseños cuidados y sabores irresistibles que encantarán a todos.</p></div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image"><img src="assets/tarta-osito.png" alt="Infantiles" class="cropped-img"></div>
+                    <div class="product-image"><img src="assets/tarta-infantil.png" alt="Infantiles" class="cropped-img"></div>
                     <div class="product-info"><h3>Tartas infantiles</h3><p>Tartas divertidas y llenas de color, pensadas para los más pequeños. Diseños temáticos y sabores deliciosos que harán su celebración mágica.</p></div>
                 </div>
             </div>
@@ -531,13 +537,16 @@
                     <div class="event-item-content">
                         <h3>Cupcakes personalizados</h3>
                         <p class="font-montserrat">Dale esa esencia e identidad a tu evento en forma de postre, lo personalizamos a tu medida para que encaje con tu evento o celebración</p>
+                        <div class="event-image">
+                            <img src="assets/cupcakes-imagen.jpeg" alt="Cupcakes personalizados">
+                        </div>
                     </div>
                 </div>
 
                 <div class="event-item animate-on-scroll">
                     <div class="event-item-content">
                         <h3>Cajas de regalo</h3>
-                        <p class="font-outfit">Lo mejor de Amargo para regalar Tanto para regalos individuales, como para corporativos, escríbenos y personaliza tus cajas</p>
+                        <p class="font-outfit">Lo mejor de Amargo para regalar tanto para regalos individuales, como para crear el regalo perfecto para tu celebración o evento</p>
                         <div class="event-image">
                             <img src="assets/cajas-de-regalo.jpeg" alt="Cajas de regalo">
                         </div>
