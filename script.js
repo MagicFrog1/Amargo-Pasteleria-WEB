@@ -238,7 +238,8 @@ document.querySelectorAll('.product-card').forEach(card => {
     card.style.cursor = 'pointer';
     card.addEventListener('click', () => {
         const title = card.querySelector('h3').innerText;
-        openProductModal(title, card.querySelector('img').src);
+        const mainImg = card.querySelector('.product-image > img') || card.querySelector('img');
+        openProductModal(title, mainImg.src);
     });
 });
 
