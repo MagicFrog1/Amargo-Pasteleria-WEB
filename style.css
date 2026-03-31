@@ -207,7 +207,6 @@ body {
 
 .promo-content {
     flex: 1.2;
-    text-align: left; /* Alineado a la izquierda para el flex */
 }
 
 .promo-schedule {
@@ -1215,8 +1214,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    max-width: 420px;
-    margin: 0;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 .schedule-header {
@@ -1235,7 +1234,7 @@ body {
 
 .schedule-header h3 {
     font-family: 'DM Serif Display', serif;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 400;
     color: var(--secondary);
     letter-spacing: 1.5px;
@@ -1282,14 +1281,14 @@ body {
 
 .schedule-body .day {
     font-family: 'Bodoni Moda', serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 1.2px;
 }
 
 .schedule-body .hours {
     font-family: 'Bodoni Moda', serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 
