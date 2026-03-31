@@ -320,64 +320,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Countdown for Semana Santa
-const initCountdown = () => {
-    // Reveal date: Tuesday, March 31, 2026 at 10:00 AM
-    const countdownDate = new Date("March 31, 2026 10:00:00").getTime();
-    let revealed = false;
-
-    const revealContent = () => {
-        if (revealed) return;
-        revealed = true;
-
-        const revealImg = document.getElementById('semana-santa-reveal-img');
-        const statusText = document.getElementById('semana-santa-status-text');
-        const revealMsg = document.getElementById('semana-santa-reveal-msg');
-
-        if (revealImg) {
-            revealImg.parentElement.classList.add('reveal-celebration', 'reveal-pulse');
-            if (revealImg.dataset.revealSrc) {
-                revealImg.src = revealImg.dataset.revealSrc;
-                revealImg.style.filter = 'none';
-                revealImg.style.opacity = '1';
-            }
-        }
-
-        if (statusText) statusText.style.display = 'none';
-        if (revealMsg) revealMsg.style.display = 'block';
-    };
-
-    const updateCountdown = () => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
-
-        if (distance < 0) {
-            // Fill with zeros
-            document.querySelectorAll('.count').forEach(el => el.innerText = "00");
-            revealContent();
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minutesEl = document.getElementById("minutes");
-        const secondsEl = document.getElementById("seconds");
-
-        if (daysEl) daysEl.innerText = days < 10 ? "0" + days : days;
-        if (hoursEl) hoursEl.innerText = hours < 10 ? "0" + hours : hours;
-        if (minutesEl) minutesEl.innerText = minutes < 10 ? "0" + minutes : minutes;
-        if (secondsEl) secondsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
-    };
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-};
-
 // Hero Background Carousel Logic
 const initHeroCarousel = () => {
     const slides = document.querySelectorAll('.hero-bg-slide');
@@ -395,5 +337,4 @@ const initHeroCarousel = () => {
 // Initialize carousels and observers
 document.addEventListener('DOMContentLoaded', () => {
     initHeroCarousel();
-    initCountdown();
 });
