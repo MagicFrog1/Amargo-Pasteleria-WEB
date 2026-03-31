@@ -206,11 +206,13 @@ body {
 }
 
 .promo-content {
-    flex: 1.2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .promo-schedule {
-    flex: 0.8;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
@@ -1214,7 +1216,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    max-width: 480px;
+    max-width: 550px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -1234,7 +1237,7 @@ body {
 
 .schedule-header h3 {
     font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: var(--secondary);
     letter-spacing: 1.5px;
@@ -1245,7 +1248,7 @@ body {
 .schedule-body {
     background: var(--secondary-light);
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 2.5rem;
     width: 100%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     transition: transform 0.5s var(--transition);
@@ -1281,14 +1284,14 @@ body {
 
 .schedule-body .day {
     font-family: 'Bodoni Moda', serif;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: 1.2px;
 }
 
 .schedule-body .hours {
     font-family: 'Bodoni Moda', serif;
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     font-weight: 400;
 }
 
