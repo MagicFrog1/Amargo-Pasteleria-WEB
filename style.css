@@ -200,7 +200,7 @@ body {
 
 .promo-flex {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alineados arriba de todo para perfecta simetría */
     justify-content: space-between;
     gap: 4rem;
 }
@@ -1221,7 +1221,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    max-width: 550px;
+    max-width: 610px; /* Aumentado un 10% */
     width: 100%;
     margin: 0 auto;
 }
@@ -1242,7 +1242,7 @@ body {
 
 .schedule-header h3 {
     font-family: 'DM Serif Display', serif;
-    font-size: 3.5rem;
+    font-size: 3.8rem; /* Un pelín más grande para acompañar el 10% extra */
     font-weight: 400;
     color: var(--secondary);
     letter-spacing: 1.5px;
