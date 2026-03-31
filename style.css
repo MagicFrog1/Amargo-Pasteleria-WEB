@@ -189,14 +189,44 @@ body {
 
 /* Semana Santa Promo */
 .special-promo {
-    padding: 3rem 0;
+    padding: 5rem 0; /* Un poco más de aire */
     background: var(--bg-light);
     border-top: 1px solid rgba(0,0,0,0.03);
     border-bottom: 1px solid rgba(0,0,0,0.03);
-    text-align: center;
     position: relative;
     overflow: hidden;
     z-index: 5;
+}
+
+.promo-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.promo-content {
+    flex: 1.2;
+    text-align: left; /* Alineado a la izquierda para el flex */
+}
+
+.promo-schedule {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .promo-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .promo-content {
+        text-align: center;
+    }
+    .promo-schedule {
+        width: 100%;
+    }
 }
 
 .promo-tag {
@@ -310,10 +340,9 @@ body {
 .mystery-item img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover; /* Cambiado a cover */
     border-radius: 20px;
-    background: #fff;
-    padding: 10px;
+    background: transparent; /* Eliminado fondo blanco */
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.6s var(--transition), opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
@@ -1076,8 +1105,8 @@ body {
 .contain-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background: #000; /* Fondo negro para que no sobre hueco blanco */
+    object-fit: cover; /* Cambiado a cover para evitar bordes laterales */
+    background: transparent; /* Eliminado el fondo negro */
     padding: 0;
     transition: transform 0.8s var(--transition);
 }
@@ -1422,8 +1451,8 @@ body {
 .modal-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Para que la tarta se vea entera */
-    background: #111; /* Color que disimula el fondo de la foto */
+    object-fit: cover; /* Cambiado a cover para que llene el espacio */
+    background: transparent; /* Eliminado el fondo oscuro */
 }
 
 @media (max-width: 992px) {
