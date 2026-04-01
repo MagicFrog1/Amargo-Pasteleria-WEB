@@ -111,7 +111,7 @@ const productDetails = {
         allergens: ['grains', 'milk']
     },
     'Nutella Heart': {
-        description: 'Un corazón rebosante de auténtica Nutella que fluye desde el primer bocado. Totalmente irresistible.',
+        description: 'Uno de los bestsellers, una cookie simple, pero ganadora, rellena el auténtica crema nutella',
         allergens: ['grains', 'milk', 'nuts']
     },
     'Cheesecake Clásica': {
