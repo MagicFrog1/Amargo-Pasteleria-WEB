@@ -110,7 +110,7 @@ const productDetails = {
         description: 'Nuestra reinterpretación del postre italiano clásico, con café de especialidad y capas de crema mascarpone irresistible.',
         allergens: ['grains', 'milk']
     },
-    'Nutella Heart': {
+    'Nutella Cookie': {
         description: 'Uno de los bestsellers, una cookie simple, pero ganadora, rellena el auténtica crema nutella',
         allergens: ['grains', 'milk', 'nuts']
     },
